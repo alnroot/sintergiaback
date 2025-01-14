@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: DockerFile 
+    ports:
+      - "8002:8002"
+    volumes:
+      - .:/app
+      - ./app/assets:/app/assets       
+    environment:
+      - PORT=8002
+      - PYTHONPATH=/app
+      - ASSETS_PATH=/app/assets
