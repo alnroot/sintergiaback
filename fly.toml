@@ -9,3 +9,6 @@ app = "sintergia"
   auto_stop_machines = true
   auto_start_machines = true
   min_machines_running = 0
+
+[services]
+  min_machines_running = 1  # This will keep at least one machine running
