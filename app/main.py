@@ -1,19 +1,20 @@
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect
 from fastapi.middleware.cors import CORSMiddleware
 from .websocket.connection_manager import ConnectionManager
+from .repositories.words_repository import INITIAL_WORDS 
 import logging
 import uvicorn
+from datetime import datetime, timezone
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 app = FastAPI()
 
-# CORS configuration updated to only allow sintergia.xyz
 origins = [
     "https://sintergia.xyz",
     "http://sintergia.xyz",
-    # Include www subdomain if needed
+    "http://127.0.0.1:5500",
     "https://www.sintergia.xyz",
     "http://www.sintergia.xyz"
 ]
@@ -22,16 +23,25 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
     allow_credentials=True,
-    allow_methods=["GET", "POST"],  # Specify only the methods you need
-    allow_headers=["*"],
+    allow_methods=["GET", "POST"],  
 )
 
 manager = ConnectionManager()
+
+
+# Add new endpoint for words
+@app.get("/api/words")
+async def get_words():
+    return {
+        "words": INITIAL_WORDS,
+        "timestamp": datetime.utcnow().isoformat()
+    }
 
 @app.websocket("/ws")
 async def websocket_endpoint(websocket: WebSocket):
     # Verify origin before accepting connection
     client_host = websocket.headers.get("origin")
+    logger.info(f"Client origin: {client_host}")
     if client_host not in origins:
         await websocket.close(4003)
         return

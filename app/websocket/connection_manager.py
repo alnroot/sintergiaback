@@ -42,7 +42,7 @@ class ConnectionManager:
     async def generate_logs(self):
         log_types = ["system", "patterns", "analysis"]
         status_options = ["normal", "warning", "critical"]
-        pattern_types = ["Alpha", "Beta", "Gamma", "Delta", "Epsilon"]
+        pattern_types = ["Emergence","Information Sharing", "Phase Transitions", "Synchronization", "Cluster Formation", "Collective Efficiency"]
         
         try:
             while True:
