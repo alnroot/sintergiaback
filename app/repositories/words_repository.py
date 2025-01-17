@@ -2,26 +2,34 @@ import requests
 
 
 INITIAL_WORDS = [
-    "Momentum", "Volatility", "Trend", "Liquidity", "Volume",
-    "Resistance", "Support", "Breakout", "Pullback", "Accumulation",
-    "Viral", "Meme", "Trending", "Engagement", "Amplification",
-    "Resonance", "Propagation", "Adoption", "Virality", "Diffusion",
-    "Sentiment", "Consensus", "FOMO", "FUD", "Hype",
-    "Fear Index", "Greed Index", "Social Volume", "Crowd Wisdom", "Mass Psychology",
-    "Cycles", "Fractals", "Wavelets", "Correlation", "Synchronicity",
-    "Time Frame", "Momentum Wave", "Price Pattern", "Market Pulse", "Trading Wave",
-    "Coherence", "Alignment", "Social Field", "Egregore", "Thoughtform",
-    "Morphic Field", "Network Effect", "Crowd Mind", "Collective Intent", "Swarm Intelligence",
-    "Engagement Rate", "Viral Coefficient", "Network Density", "Adoption Curve", "Growth Rate",
-    "Retention", "Stickiness", "Social Proof", "Critical Mass", "Tipping Point",
-    "Convergence", "Catalysis", "Breakthrough", "Flash Point", "Singularity",
-    "Perfect Storm", "Alignment", "Confluence", "Synchronicity", "Resonance Point",
-    "Mass Flow", "Group Think", "Hive Mind", "Collective Flow", "Social Coherence",
-    "Market Sentiment", "Crowd Wisdom", "Swarm Behavior", "Emergent Order", "Social Proof",
-    "Energy Flow", "Vibe Check", "Resonance", "Harmonic", "Frequency",
-    "Wave Pattern", "Pulse", "Rhythm", "Oscillation", "Vibration",
-    "⚡️", "↗️", "↘️", "⭐️", "🌊", "🔄", "📈", "📉", "💫", "🌀",
-    "∞", "⚛", "✧", "◈", "⟡", "☯", "⚕", "φ", "π", "Ω"
+    "BTC102K", "CryptoRally", "BTCBreakout", "AllTimeHigh", "BTCBull",
+    "NewATH", "CryptoWealth", "DigitalGold", "BTCSeason", "MassAdoption",
+        "XRPBull", "RippleRally", "XRPReserve", "GarlinghouseEffect", "RippleWave",
+    "XRPMomentum", "RippleBreakout", "XRPSurge", "CryptoRegulation", "InstituionalXRP",
+    
+    "TrillionCap", "CryptoTrillion", "StablecoinFlow", "MarketVolume", "BullMarket",
+    "InstitutionalFlow", "ETFDemand", "CryptoETF", "InvestorConfidence", "MarketMomentum",
+    
+    "RetailStrength", "JobMarket", "EconomicResilience", "FedPolicy", "InflationWatch",
+    "ConsumerSpending", "MarketPulse", "EconomicData", "MarketSentiment", "FedWatch",
+    
+    "Breakthrough", "Consolidation", "ResistanceBreak", "SupportLevel", "TechnicalBreakout",
+    "PriceDiscovery", "MarketStructure", "TrendLine", "VolumeProfile", "PriceMomentum",
+    
+    "CryptoSentiment", "MarketOptimism", "BullishConsensus", "InvestorMood", "MarketPsychology",
+    "SocialVolume", "CryptoTrend", "MarketNarrative", "InvestorConfidence", "CommunityMood",
+    
+    "InstitutionalBuying", "CorporateAdoption", "ETFInflow", "WallStreetCrypto", "MainstreamCrypto",
+    "InstitutionalDemand", "CryptoIntegration", "FinancialInnovation", "CryptoRegulation", "MarketMaturity",
+    
+    "LiquidityFlow", "MarketDepth", "OrderFlow", "TradingVolume", "PriceAction",
+    "MarketEfficiency", "TradingActivity", "MarketLiquidity", "VolumeSurge", "PriceDiscovery",
+    
+    "⚡️", "↗️", "🚀", "💹", "📈",
+    "🌕", "💎", "🔥", "⭐️", "💫",
+    
+    "∞", "↗", "⚛", "◈", "⟡",
+    "₿", "✧", "◊", "∆", "Ω",
 ]
 
 class WordsExporter:
